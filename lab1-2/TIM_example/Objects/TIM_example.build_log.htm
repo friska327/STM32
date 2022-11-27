@@ -1,0 +1,379 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 Konstan, HP Inc., LIC=KRMW3-AJL9L-IIE5V-P2WT6-LU2XB-3Z4ED
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Konst\OneDrive\Ðàáî÷èé ñòîë\ìèêðîêîíòðîëëåðû\Ëàáû\lab1-2\TIM_example\TIM_example.uvprojx
+Project File Date:  09/30/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+main.c(2): warning: In file included from...
+./my_lib.h(5): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM4_Init ();
+               ^
+                void
+./my_lib.h(8): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void ExINT0_PA0();
+               ^
+                void
+main.c(3): warning: In file included from...
+./interrupt.h(1): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM4_IRQHandler ();
+                     ^
+                      void
+./interrupt.h(2): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void EXTI0_IRQHandler ();
+                      ^
+                       void
+./interrupt.h(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void EXTI1_IRQHandler ();
+                      ^
+                       void
+./interrupt.h(4): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void SysTick_Handler();
+                    ^
+                     void
+./interrupt.h(4): warning: no newline at end of file [-Wnewline-eof]
+void SysTick_Handler();
+                       ^
+main.c(4): warning: In file included from...
+./ds18b20.h(28): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+char initial_ds18b20();
+                    ^
+                     void
+./ds18b20.h(30): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+float read_T();
+            ^
+             void
+./ds18b20.h(41): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+char recive_Bit();
+               ^
+                void
+./ds18b20.h(43): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+char read_Byte ();
+               ^
+                void
+./ds18b20.h(46): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void convert(); //broadcast mess
+            ^
+             void
+./ds18b20.h(48): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void  alarm_search();
+                  ^
+                   void
+13 warnings generated.
+compiling main.c...
+interrupt.c(2): warning: In file included from...
+./my_lib.h(5): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM4_Init ();
+               ^
+                void
+./my_lib.h(8): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void ExINT0_PA0();
+               ^
+                void
+interrupt.c(4): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler()
+     ^
+interrupt.c(4): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler()
+^
+static 
+interrupt.c(4): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void SysTick_Handler()
+                    ^
+interrupt.c(9): warning: no previous prototype for function 'TIM4_IRQHandler' [-Wmissing-prototypes]
+void TIM4_IRQHandler () {                                                                                                        // TIM4 interruprt handler
+     ^
+interrupt.c(9): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM4_IRQHandler () {                                                                                                        // TIM4 interruprt handler
+^
+static 
+interrupt.c(9): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM4_IRQHandler () {                                                                                                        // TIM4 interruprt handler
+                     ^
+interrupt.c(22): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+void EXTI0_IRQHandler ()
+     ^
+interrupt.c(22): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI0_IRQHandler ()
+^
+static 
+interrupt.c(22): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void EXTI0_IRQHandler ()
+                      ^
+8 warnings generated.
+compiling interrupt.c...
+my_lib.c(6): warning: no previous prototype for function 'ExINTx_PA0' [-Wmissing-prototypes]
+void ExINTx_PA0()
+     ^
+my_lib.c(6): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ExINTx_PA0()
+^
+static 
+my_lib.c(6): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void ExINTx_PA0()
+               ^
+my_lib.c(15): warning: no previous prototype for function 'SystemCoreClockConfigure' [-Wmissing-prototypes]
+void SystemCoreClockConfigure(void) {
+     ^
+my_lib.c(15): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SystemCoreClockConfigure(void) {
+^
+static 
+my_lib.c(40): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                TIM4->PSC = (SystemCoreClock / 10000 ) - 1;     
+                          ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+my_lib.c(36): warning: no previous prototype for function 'TIM4_Init' [-Wmissing-prototypes]
+void TIM4_Init () {                                                                                                                              // TIM4 using for start conversion
+     ^
+my_lib.c(36): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM4_Init () {                                                                                                                              // TIM4 using for start conversion
+^
+static 
+my_lib.c(36): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM4_Init () {                                                                                                                              // TIM4 using for start conversion
+               ^
+my_lib.c(47): warning: no previous prototype for function 'GPIO_Init' [-Wmissing-prototypes]
+void GPIO_Init (void) {
+     ^
+my_lib.c(47): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIO_Init (void) {
+^
+static 
+my_lib.c(73): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                SysTick->LOAD = us * (SystemCoreClock/1000000);
+                                ^~ ~
+my_lib.c(71): warning: no previous prototype for function 'DELAY_us' [-Wmissing-prototypes]
+void DELAY_us (int us)
+     ^
+my_lib.c(71): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DELAY_us (int us)
+^
+static 
+9 warnings generated.
+compiling my_lib.c...
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103RB/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+ds18b20.c(2): warning: In file included from...
+./my_lib.h(5): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM4_Init ();
+               ^
+                void
+./my_lib.h(8): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void ExINT0_PA0();
+               ^
+                void
+ds18b20.c(3): warning: In file included from...
+./ds18b20.h(28): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+char initial_ds18b20();
+                    ^
+                     void
+./ds18b20.h(30): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+float read_T();
+            ^
+             void
+./ds18b20.h(41): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+char recive_Bit();
+               ^
+                void
+./ds18b20.h(43): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+char read_Byte ();
+               ^
+                void
+./ds18b20.h(46): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void convert(); //broadcast mess
+            ^
+             void
+./ds18b20.h(48): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void  alarm_search();
+                  ^
+                   void
+ds18b20.c(8): warning: unused variable 'i' [-Wunused-variable]
+        char i = 0;
+             ^
+ds18b20.c(6): warning: no previous prototype for function 'alarm_search' [-Wmissing-prototypes]
+void alarm_search()
+     ^
+./ds18b20.h(48): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void  alarm_search();
+      ^
+                   void
+ds18b20.c(6): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void alarm_search()
+                 ^
+ds18b20.c(44): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                ID_X[i].num = 0;
+                    ^~
+ds18b20.c(47): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                }while(Tree_search(&ID_X[i]) );
+                                        ^~
+ds18b20.c(49): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                if(Compute_CRC8(Tree_search(ID_X[i].ID), 7))
+                                                ^~
+ds18b20.c(49): warning: incompatible pointer types passing 'char [8]' to parameter of type 'struct ID_ds18b20 *' [-Wincompatible-pointer-types]
+                if(Compute_CRC8(Tree_search(ID_X[i].ID), 7))
+                                            ^~~~~~~~~~
+./ds18b20.h(32): note: passing argument to parameter 'pt' here
+char Tree_search(struct ID_ds18b20 *pt);
+                                    ^
+ds18b20.c(49): warning: incompatible integer to pointer conversion passing 'char' to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wint-conversion]
+                if(Compute_CRC8(Tree_search(ID_X[i].ID), 7))
+                                ^~~~~~~~~~~~~~~~~~~~~~~
+./ds18b20.h(49): note: passing argument to parameter 'data' here
+char Compute_CRC8 (uint8_t* data, uint8_t length);
+                            ^
+ds18b20.c(56): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+ds18b20.c(70): warning: array subscript is of type 'char' [-Wchar-subscripts]
+        pt->ID[pt->num] = pt->ID[pt->num] >> 1;
+              ^~~~~~~~
+ds18b20.c(70): warning: array subscript is of type 'char' [-Wchar-subscripts]
+        pt->ID[pt->num] = pt->ID[pt->num] >> 1;
+                                ^~~~~~~~
+ds18b20.c(74): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                pt->ID[pt->num] |= 0;
+                      ^~~~~~~~
+ds18b20.c(79): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                pt->ID[pt->num] |= 128;
+                      ^~~~~~~~
+ds18b20.c(88): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                        pt->ID[pt->num] |= 128;
+                              ^~~~~~~~
+ds18b20.c(92): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                        pt->ID[pt->num] |= 0;
+                              ^~~~~~~~
+ds18b20.c(123): warning: no previous prototype for function 'MATCH_R' [-Wmissing-prototypes]
+void MATCH_R(char *addr)
+     ^
+ds18b20.c(123): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void MATCH_R(char *addr)
+^
+static 
+ds18b20.c(175): warning: no previous prototype for function 'convert' [-Wmissing-prototypes]
+void convert() //broadcast mess
+     ^
+./ds18b20.h(46): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void convert(); //broadcast mess
+     ^
+             void
+ds18b20.c(175): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void convert() //broadcast mess
+            ^
+ds18b20.c(209): warning: implicitly declaring library function 'abs' with type 'int (int)' [-Wimplicit-function-declaration]
+                                                T += 1/pow(2, abs(n));
+                                                              ^
+ds18b20.c(209): note: include the header <stdlib.h> or explicitly provide a declaration for 'abs'
+ds18b20.c(209): warning: implicit conversion when assigning computation result loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                                                T += 1/pow(2, abs(n));
+                                                  ~~ ~^~~~~~~~~~~~~~~
+ds18b20.c(213): warning: implicit conversion when assigning computation result loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                                        T += pow(2, abs(n));
+                                          ~~ ^~~~~~~~~~~~~~
+ds18b20.c(225): warning: implicit conversion when assigning computation result loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                                T += pow(2, n);
+                                  ~~ ^~~~~~~~~
+ds18b20.c(182): warning: no previous prototype for function 'read_T' [-Wmissing-prototypes]
+float read_T(char *addr)
+      ^
+./ds18b20.h(30): note: this declaration is not a prototype; add parameter declarations to make it one
+float read_T();
+      ^
+ds18b20.c(235): warning: no previous prototype for function 'initial_ds18b20' [-Wmissing-prototypes]
+char initial_ds18b20 ()
+     ^
+./ds18b20.h(28): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+char initial_ds18b20();
+     ^
+                     void
+ds18b20.c(235): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+char initial_ds18b20 ()
+                     ^
+ds18b20.c(276): warning: no previous prototype for function 'read_Byte' [-Wmissing-prototypes]
+char read_Byte ()
+     ^
+./ds18b20.h(43): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+char read_Byte ();
+     ^
+                void
+ds18b20.c(276): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+char read_Byte ()
+               ^
+ds18b20.c(317): warning: no previous prototype for function 'recive_Bit' [-Wmissing-prototypes]
+char recive_Bit()
+     ^
+./ds18b20.h(41): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+char recive_Bit();
+     ^
+                void
+ds18b20.c(317): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+char recive_Bit()
+               ^
+37 warnings generated.
+compiling ds18b20.c...
+linking...
+Program Size: Code=1350 RO-data=286 RW-data=4 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\TIM_example.axf" - 0 Error(s), 68 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103RB
+  .\RTE\_Target_1
+  C:\Users\Konst\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\Konst\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
