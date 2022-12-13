@@ -1,0 +1,450 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 Konstan, HP Inc., LIC=KRMW3-AJL9L-IIE5V-P2WT6-LU2XB-3Z4ED
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Konst\OneDrive\Рабочий стол\микроконтроллеры\Лабы\lab5\3.1lab\TIM_example.uvprojx
+Project File Date:  10/28/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+main.c(2): warning: In file included from...
+./my_lib.h(5): warning: no newline at end of file [-Wnewline-eof]
+#define BUFF_SIZE 50
+                    ^
+main.c(3): warning: In file included from...
+./interrupt.h(1): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM4_IRQHandler ();
+                     ^
+                      void
+./interrupt.h(2): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void EXTI0_IRQHandler ();
+                      ^
+                       void
+./interrupt.h(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void EXTI1_IRQHandler ();
+                      ^
+                       void
+./interrupt.h(4): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void SysTick_Handler();
+                    ^
+                     void
+./interrupt.h(5): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void USART1_IRQHandler();
+                      ^
+                       void
+./interrupt.h(6): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void DMA1_Channel4_IRQHandler();
+                             ^
+                              void
+./interrupt.h(7): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void I2C1_ER_IRQHandler();
+                       ^
+                        void
+./interrupt.h(7): warning: no newline at end of file [-Wnewline-eof]
+void I2C1_ER_IRQHandler();
+                          ^
+main.c(15): warning: implicit declaration of function 'I2C1_Init' is invalid in C99 [-Wimplicit-function-declaration]
+        I2C1_Init();
+        ^
+main.c(16): warning: implicit declaration of function 'DMA_Init' is invalid in C99 [-Wimplicit-function-declaration]
+        DMA_Init();
+        ^
+main.c(18): warning: implicit declaration of function 'ADC_Init' is invalid in C99 [-Wimplicit-function-declaration]
+        ADC_Init();
+        ^
+main.c(20): warning: implicit declaration of function 'SSD1306_Init' is invalid in C99 [-Wimplicit-function-declaration]
+        SSD1306_Init();
+        ^
+main.c(22): warning: implicit declaration of function 'TIM2_Init' is invalid in C99 [-Wimplicit-function-declaration]
+        TIM2_Init ();
+        ^
+main.c(23): warning: implicit declaration of function 'TIM3_Init' is invalid in C99 [-Wimplicit-function-declaration]
+        TIM3_Init ();
+        ^
+15 warnings generated.
+compiling main.c...
+interrupt.c(2): warning: In file included from...
+./my_lib.h(5): warning: no newline at end of file [-Wnewline-eof]
+#define BUFF_SIZE 50
+                    ^
+interrupt.c(5): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler()
+     ^
+interrupt.c(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler()
+^
+static 
+interrupt.c(5): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void SysTick_Handler()
+                    ^
+interrupt.c(13): warning: implicit declaration of function 'SSD1306_Write_DATA' is invalid in C99 [-Wimplicit-function-declaration]
+                SSD1306_Write_DATA();
+                ^
+interrupt.c(14): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+interrupt.c(11): warning: no previous prototype for function 'TIM3_IRQHandler' [-Wmissing-prototypes]
+void TIM3_IRQHandler () {                                                                                                        // TIM4 interruprt handler
+     ^
+interrupt.c(11): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM3_IRQHandler () {                                                                                                        // TIM4 interruprt handler
+^
+static 
+interrupt.c(11): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM3_IRQHandler () {                                                                                                        // TIM4 interruprt handler
+                     ^
+7 warnings generated.
+compiling interrupt.c...
+my_lib.c(7): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                SysTick->LOAD = us * (SystemCoreClock/1000000);
+                                ^~ ~
+my_lib.c(5): warning: no previous prototype for function 'DELAY_us' [-Wmissing-prototypes]
+void DELAY_us (int us)
+     ^
+my_lib.c(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DELAY_us (int us)
+^
+static 
+my_lib.c(16): warning: no previous prototype for function 'SystemCoreClockConfigure' [-Wmissing-prototypes]
+void SystemCoreClockConfigure(void) {
+     ^
+my_lib.c(16): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SystemCoreClockConfigure(void) {
+^
+static 
+my_lib.c(38): warning: no previous prototype for function 'GPIO_Init' [-Wmissing-prototypes]
+void GPIO_Init (void) 
+     ^
+my_lib.c(38): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIO_Init (void) 
+^
+static 
+4 warnings generated.
+compiling my_lib.c...
+I2C.c(16): warning: no previous extern declaration for non-static variable 'ptt' [-Wmissing-variable-declarations]
+int ptt = 0;
+    ^
+I2C.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int ptt = 0;
+^
+I2C.c(22): warning: no previous extern declaration for non-static variable 'mass_char' [-Wmissing-variable-declarations]
+char mass_char [13][8] = {
+     ^
+I2C.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char mass_char [13][8] = {
+^
+I2C.c(39): warning: no previous extern declaration for non-static variable 'letter_T' [-Wmissing-variable-declarations]
+char letter_T [] = 
+     ^
+I2C.c(39): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char letter_T [] = 
+^
+I2C.c(42): warning: no previous extern declaration for non-static variable 'letter_U' [-Wmissing-variable-declarations]
+char letter_U [] = 
+     ^
+I2C.c(42): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char letter_U [] = 
+^
+I2C.c(45): warning: no previous extern declaration for non-static variable 'letter_NN' [-Wmissing-variable-declarations]
+char letter_NN [] = 
+     ^
+I2C.c(45): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char letter_NN [] = 
+^
+I2C.c(49): warning: no previous prototype for function 'I2C1_Init' [-Wmissing-prototypes]
+void I2C1_Init()
+     ^
+I2C.c(49): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C1_Init()
+^
+static 
+I2C.c(49): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void I2C1_Init()
+              ^
+I2C.c(84): warning: incompatible pointer to integer conversion assigning to 'volatile uint32_t' (aka 'volatile unsigned int') from 'volatile uint16_t *' (aka 'volatile unsigned short *') [-Wint-conversion]
+        DMA1_Channel6->CPAR = &I2C1->DR;
+                            ^ ~~~~~~~~~
+I2C.c(77): warning: no previous prototype for function 'DMA_Init' [-Wmissing-prototypes]
+void DMA_Init()
+     ^
+I2C.c(77): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DMA_Init()
+^
+static 
+I2C.c(77): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void DMA_Init()
+             ^
+I2C.c(96): warning: incompatible pointer to integer conversion assigning to 'volatile uint32_t' (aka 'volatile unsigned int') from 'char *' [-Wint-conversion]
+        DMA1_Channel6->CMAR = mass;
+                            ^ ~~~~
+I2C.c(97): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        DMA1_Channel6->CNDTR = num;
+                             ~ ^~~
+I2C.c(92): warning: no previous prototype for function 'DMA_TX_GO' [-Wmissing-prototypes]
+void DMA_TX_GO(char *mass, int num) // 6 channel
+     ^
+I2C.c(92): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DMA_TX_GO(char *mass, int num) // 6 channel
+^
+static 
+I2C.c(106): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        DMA1_Channel6->CCR &= ~DMA_CCR6_EN;
+                           ~~ ^~~~~~~~~~~~
+I2C.c(108): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        while(!(I2C_SR1_BTF && I2C1->SR1)){;}
+                                           ^
+I2C.c(104): warning: no previous prototype for function 'DMA1_Channel6_IRQHandler' [-Wmissing-prototypes]
+void DMA1_Channel6_IRQHandler()
+     ^
+I2C.c(104): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DMA1_Channel6_IRQHandler()
+^
+static 
+I2C.c(104): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void DMA1_Channel6_IRQHandler()
+                             ^
+I2C.c(119): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                while(!(I2C1->SR1&I2C_SR1_SB)){;}  
+                                               ^
+I2C.c(125): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                while(((I2C1->SR1)&I2C_SR1_ADDR)==0){;}
+                                                     ^
+I2C.c(115): warning: no previous prototype for function 'Send_Addr' [-Wmissing-prototypes]
+void Send_Addr(char ADD)
+     ^
+I2C.c(115): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Send_Addr(char ADD)
+^
+static 
+I2C.c(132): warning: use of logical '&&' with constant operand [-Wconstant-logical-operand]
+        while(!(I2C1->SR1 && I2C_SR1_TXE)){;}
+                          ^  ~~~~~~~~~~~
+I2C.c(132): note: use '&' for a bitwise operation
+        while(!(I2C1->SR1 && I2C_SR1_TXE)){;}
+                          ^~
+                          &
+I2C.c(132): note: remove constant to silence this warning
+        while(!(I2C1->SR1 && I2C_SR1_TXE)){;}
+                         ~^~~~~~~~~~~~~~
+I2C.c(132): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        while(!(I2C1->SR1 && I2C_SR1_TXE)){;}
+                                           ^
+I2C.c(130): warning: no previous prototype for function 'Send_Byte' [-Wmissing-prototypes]
+void Send_Byte(char byte)
+     ^
+I2C.c(130): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Send_Byte(char byte)
+^
+static 
+I2C.c(138): warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+SSD1306_Write_CONF(char inst)
+^
+I2C.c(140): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                while(I2C1->SR2&I2C_SR2_BUSY){;}
+                                              ^
+I2C.c(141): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                Send_Addr(Addr_Transmite);
+                          ^
+I2C.c(7): note: expanded from macro 'Addr_Transmite'
+#define Addr_Transmite  0b01111000
+                        ^
+I2C.c(138): warning: no previous prototype for function 'SSD1306_Write_CONF' [-Wmissing-prototypes]
+SSD1306_Write_CONF(char inst)
+^
+I2C.c(138): note: declare 'static' if the function is not intended to be used outside of this translation unit
+SSD1306_Write_CONF(char inst)
+                  ^
+                  static 
+I2C.c(146): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+I2C.c(148): warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+SSD1306_Init()
+^
+I2C.c(148): warning: no previous prototype for function 'SSD1306_Init' [-Wmissing-prototypes]
+I2C.c(148): note: declare 'static' if the function is not intended to be used outside of this translation unit
+SSD1306_Init()
+            ^
+            static 
+I2C.c(148): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+SSD1306_Init()
+            ^
+I2C.c(227): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+I2C.c(232): warning: no previous prototype for function 'convert_f_to_char' [-Wmissing-prototypes]
+void convert_f_to_char(double num)
+     ^
+I2C.c(232): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void convert_f_to_char(double num)
+^
+static 
+I2C.c(236): warning: 'sprintf' will always overflow; destination buffer has size 6, but format string expands to at least 9 [-Wfortify-source]
+        sprintf (buff, "%f",num);
+        ^
+I2C.c(260): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        while(I2C1->SR2&I2C_SR2_BUSY){;}
+                                      ^
+I2C.c(261): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                Send_Addr(Addr_Transmite);
+                          ^
+I2C.c(7): note: expanded from macro 'Addr_Transmite'
+#define Addr_Transmite  0b01111000
+                        ^
+I2C.c(251): warning: no previous prototype for function 'SSD1306_Write_DATA' [-Wmissing-prototypes]
+void SSD1306_Write_DATA()
+     ^
+I2C.c(251): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SSD1306_Write_DATA()
+^
+static 
+I2C.c(251): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void SSD1306_Write_DATA()
+                       ^
+I2C.c(14): warning: no previous extern declaration for non-static variable 'T' [-Wmissing-variable-declarations]
+float T;
+      ^
+I2C.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+float T;
+^
+I2C.c(18): warning: no previous extern declaration for non-static variable 'BUFF_TX' [-Wmissing-variable-declarations]
+char BUFF_TX [1025];
+     ^
+I2C.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char BUFF_TX [1025];
+^
+I2C.c(19): warning: no previous extern declaration for non-static variable 'BUFF_DATA' [-Wmissing-variable-declarations]
+int      BUFF_DATA [2];
+         ^
+I2C.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int      BUFF_DATA [2];
+^
+41 warnings generated.
+compiling I2C.c...
+RTE/Device/STM32F103RB/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+ADC.c(11): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                TIM2->PSC = (SystemCoreClock / 10000 ) - 1;     
+                          ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+ADC.c(7): warning: no previous prototype for function 'TIM2_Init' [-Wmissing-prototypes]
+void TIM2_Init () {                                                                                                                              // TIM4 using for start conversion
+     ^
+ADC.c(7): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_Init () {                                                                                                                              // TIM4 using for start conversion
+^
+static 
+ADC.c(7): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM2_Init () {                                                                                                                              // TIM4 using for start conversion
+               ^
+ADC.c(24): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                TIM3->PSC = (SystemCoreClock / 10000 ) - 1;     
+                          ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+ADC.c(20): warning: no previous prototype for function 'TIM3_Init' [-Wmissing-prototypes]
+void TIM3_Init () {                                                                                                                              // TIM4 using for start conversion
+     ^
+ADC.c(20): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM3_Init () {                                                                                                                              // TIM4 using for start conversion
+^
+static 
+ADC.c(20): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM3_Init () {                                                                                                                              // TIM4 using for start conversion
+               ^
+ADC.c(44): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+         while (!(ADC1->CR2 & ADC_CR2_CAL)){;} //calibration
+                                            ^
+ADC.c(32): warning: no previous prototype for function 'ADC_Init' [-Wmissing-prototypes]
+void ADC_Init()
+     ^
+ADC.c(32): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ADC_Init()
+^
+static 
+ADC.c(32): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void ADC_Init()
+             ^
+ADC.c(65): warning: no previous prototype for function 'ADC1_2_IRQHandler' [-Wmissing-prototypes]
+void ADC1_2_IRQHandler(void)
+     ^
+ADC.c(65): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ADC1_2_IRQHandler(void)
+^
+static 
+ADC.c(4): warning: no previous extern declaration for non-static variable 'U' [-Wmissing-variable-declarations]
+double U;
+       ^
+ADC.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+double U;
+^
+ADC.c(5): warning: no previous extern declaration for non-static variable 'TT' [-Wmissing-variable-declarations]
+double TT;
+       ^
+ADC.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+double TT;
+^
+12 warnings generated.
+compiling ADC.c...
+linking...
+Program Size: Code=11100 RO-data=840 RW-data=132 ZI-data=2688  
+FromELF: creating hex file...
+".\Objects\TIM_example.axf" - 0 Error(s), 80 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103RB
+  .\RTE\_Target_1
+  C:\Users\Konst\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\Konst\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
